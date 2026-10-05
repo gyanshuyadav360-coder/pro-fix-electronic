@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="hi" id="htmlRoot" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Pro Fix Electronic - हाइपरलोकल सर्विस हब</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Animation Styles -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navbar with Custom Graphic Logo -->
+    <nav class="bg-indigo-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Custom Designed Graphic Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="bg-white p-2 rounded-xl shadow-md flex items-center justify-center transform hover:rotate-6 transition duration-300">
+                    <svg class="w-7 h-7 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                        <polygon points="13 2 9 10 13 10 11 18 17 9 13 9 13 2" fill="currentColor" stroke="none"></polygon>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-lg md:text-xl font-extrabold tracking-wide block leading-none">Pro Fix</span>
+                    <span class="text-xs text-indigo-200 font-medium tracking-widest uppercase">Electronic Hub</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <div class="space-x-3 hidden md:flex text-sm font-medium">
+                    <a href="#services" class="hover:text-indigo-200 transition" data-translate="navServices">सेवाएं</a>
+                    <a href="#specialists" class="hover:text-indigo-200 transition" data-translate="navSpecialists">विशेषज्ञ मिस्त्री</a>
+                    <a href="#rates" class="hover:text-indigo-200 transition" data-translate="navRates">रेट कार्ड</a>
+                    <a href="#book" class="hover:text-indigo-200 transition" data-translate="navBook">बुक करें</a>
+                    <a href="#join-worker" class="hover:text-indigo-200 transition" data-translate="navWorker">कारीगर बनें</a>
+                    <a href="#payment" class="hover:text-indigo-200 transition" data-translate="navPayment">पेमेंट</a>
+                    <a href="#admin" class="hover:text-indigo-200 transition" data-translate="navAdmin">डैशबोर्ड</a>
+                </div>
+                <!-- 25 Languages Selector Dropdown -->
+                <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-indigo-700 text-white text-sm font-semibold px-2.5 py-1.5 rounded border border-indigo-500 focus:outline-none cursor-pointer max-w-[150px]">
+                    <option value="hi" selected>हिंदी (Hindi)</option>
+                    <option value="en">English</option>
+                    <option value="bho">भोजपुरी (Bhojpuri)</option>
+                    <option value="mai">मैथिली (Maithili)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                    <option value="as">অসমীয়া (Assamese)</option>
+                    <option value="ur">اردو (Urdu)</option>
+                    <option value="sa">संस्कृतम् (Sanskrit)</option>
+                    <option value="ne">नेपाली (Nepali)</option>
+                    <option value="sd">सिन्धी (Sindhi)</option>
+                    <option value="ks">कॉशुर (Kashmiri)</option>
+                    <option value="es">Español (Spanish)</option>
+                    <option value="fr">Français (French)</option>
+                    <option value="de">Deutsch (German)</option>
+                    <option value="ja">日本語 (Japanese)</option>
+                    <option value="zh">中文 (Chinese)</option>
+                    <option value="ar">العربية (Arabic)</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white py-20 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto animate-fade-in relative z-10">
+            <span class="bg-indigo-500/30 text-indigo-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4 border border-indigo-400/30">Arrah's #1 Electronic Service Hub</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight" data-translate="heroTitle">इलेक्ट्रॉनिक्स और घर की मरम्मत अब एक क्लिक दूर</h1>
+            <p class="text-lg md:text-xl text-indigo-200 mb-8 max-w-2xl mx-auto" data-translate="heroSubtitle">टीवी, मोबाइल, फ्रिज, एसी और वायरिंग के लिए अपने इलाके के एक्सपर्ट मिस्त्री बुक करें।</p>
+            <div class="space-x-4">
+                <a href="#book" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-full shadow-xl transition transform hover:-translate-y-1 inline-block mb-3">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> <span data-translate="btnBookNow">सर्विस बुक करें</span>
+                </a>
+                <a href="#join-worker" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-3.5 px-8 rounded-full shadow-xl transition transform hover:-translate-y-1 inline-block">
+                    <i class="fa-solid fa-user-plus mr-2"></i> <span data-translate="btnJoinWorker">कारीगर के रूप में जुड़ें</span>
+                </a>
+            </div>
+        </div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-600 rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-600 rounded-full filter blur-3xl opacity-20"></div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-slate-900" data-translate="servicesHeading">हमारी प्रमुख सेवाएं</h2>
+        <p class="text-center text-slate-600 mb-10 max-w-lg mx-auto text-sm" data-translate="servicesSub">प्रशिक्षित तकनीशियनों द्वारा घर बैठे सुरक्षित और किफायती समाधान।</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 hover:shadow-2xl transition transform hover:-translate-y-1.5 duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Electrical Wiring" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge1">₹199 से शुरू</div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service1Title">इलेक्ट्रिकल वायरिंग</h3>
+                    <p class="text-slate-600 mb-4 text-sm" data-translate="service1Desc">घरेलू वायरिंग, स्विच बोर्ड रिपेयर, एमसीबी और इन्वर्टर फिटिंग।</p>
+                    <div class="text-yellow-500 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span class="text-slate-500 font-semibold">(4.8/5)</span></div>
+                    <button onclick="selectService('इलेक्ट्रिकल वायरिंग')" class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl transition duration-300"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 hover:shadow-2xl transition transform hover:-translate-y-1.5 duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80" alt="TV Repair" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge2">₹249 से शुरू</div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service2Title">टीवी & ऑडियो रिपेयर</h3>
+                    <p class="text-slate-600 mb-4 text-sm" data-translate="service2Desc">LED/LCD टीवी डिस्प्ले समस्या, साउंड सिस्टम और होम थिएटर रिपेयर।</p>
+                    <div class="text-yellow-500 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span class="text-slate-500 font-semibold">(4.9/5)</span></div>
+                    <button onclick="selectService('टीवी & ऑडियो रिपेयर')" class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl transition duration-300"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 hover:shadow-2xl transition transform hover:-translate-y-1.5 duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="AC & Fridge Repair" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge3">₹499 से शुरू</div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service3Title">होम अप्लायंसेज (AC/फ्रिज)</h3>
+                    <p class="text-slate-600 mb-4 text-sm" data-translate="service3Desc">रेफ्रिजरेटर, एसी सर्विसिंग, वाशिंग मशीन और कूलर रिपेयरिंग।</p>
+                    <div class="text-yellow-500 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="far fa-star"></i> <span class="text-slate-500 font-semibold">(4.5/5)</span></div>
+                    <button onclick="selectService('होम अप्लायंसेज (AC/फ्रिज)')" class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl transition duration-300"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialists Section -->
+    <section id="specialists" class="py-16 bg-indigo-50/60 max-w-7xl mx-auto px-4 rounded-3xl my-6 border border-indigo-100">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-slate-900" data-translate="specHeading">कौन सा मिस्त्री कौन सा काम करता है? (Category Expert)</h2>
+        <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto text-sm" data-translate="specSubtext">हमारे पास हर खास काम के लिए ट्रेंड और सर्टिफाइड एक्सपर्ट मिस्त्री उपलब्ध हैं:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat1Title">इलेक्ट्रिकल एक्सपर्ट</h3>
+                <p class="text-sm text-slate-600 mb-3" data-translate="cat1Desc">घर की नई वायरिंग, मीटर बोर्ड, कट-आउट और हेवी लोड फॉल्ट ठीक करना।</p>
+                <span class="inline-block bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded font-medium" data-translate="cat1Tag">विद्युत विशेषज्ञ</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-display"></i></div>
+                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat2Title">टीवी & डिस्प्ले मिस्त्री</h3>
+                <p class="text-sm text-slate-600 mb-3" data-translate="cat2Desc">LED/Smart TV मदरबोर्ड रिपेयर, स्क्रीन लाइन प्रॉब्लम और वॉल माउंटिंग।</p>
+                <span class="inline-block bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded font-medium" data-translate="cat2Tag">डिस्प्ले एक्सपर्ट</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-temperature-low"></i></div>
+                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat3Title">कूलिंग & AC मिस्त्री</h3>
+                <p class="text-sm text-slate-600 mb-3" data-translate="cat3Desc">AC गैस रिफिलिंग, कंप्रेसर रिपेयर, फ्रिज कूलिंग और वाटर प्यूरीफायर (RO) सर्विस।</p>
+                <span class="inline-block bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded font-medium" data-translate="cat3Tag">कूलिंग एक्सपर्ट</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat4Title">मोबाइल & गैजेट्स मिस्त्री</h3>
+                <p class="text-sm text-slate-600 mb-3" data-translate="cat4Desc">स्मार्टफोन टच/ग्लास चेंज, चार्जिंग जैक, बैटरी रिप्लेसमेंट और सॉफ्टवेयर समस्या।</p>
+                <span class="inline-block bg-indigo-50 text-indigo-700 text-xs px-2.5 py-1 rounded font-medium" data-translate="cat4Tag">गैजेट एक्सपर्ट</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rate Card Section -->
+    <section id="rates" class="py-12 bg-white max-w-7xl mx-auto px-4 rounded-2xl shadow-sm border border-slate-100 my-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-900" data-translate="rateHeading">अनुमानित रेट कार्ड (Rate Card)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-indigo-300 transition">
+                <h3 class="font-bold text-lg mb-2 text-indigo-600" data-translate="rate1Title">विजिटिंग चार्ज (Inspection)</h3>
+                <p class="text-2xl font-extrabold text-slate-800">₹99 - ₹149</p>
+                <p class="text-xs text-slate-500 mt-1" data-translate="rate1Desc">इलेक्ट्रॉनिक उपकरण जांचने की फीस</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-indigo-300 transition">
+                <h3 class="font-bold text-lg mb-2 text-indigo-600" data-translate="rate2Title">सामान्य रिपेयर कार्य</h3>
+                <p class="text-2xl font-extrabold text-slate-800">₹199 से शुरू</p>
+                <p class="text-xs text-slate-500 mt-1" data-translate="rate2Desc">वायरिंग या स्विच बोर्ड सुधारना</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-indigo-300 transition">
+                <h3 class="font-bold text-lg mb-2 text-indigo-600" data-translate="rate3Title">बड़े अप्लायंसेज रिपेयर</h3>
+                <p class="text-2xl font-extrabold text-slate-800">₹499 से शुरू</p>
+                <p class="text-xs text-slate-500 mt-1" data-translate="rate3Desc">AC सर्विसिंग, फ्रिज या टीवी रिपेयर</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="book" class="bg-indigo-50 py-16 px-4">
+        <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg border border-indigo-100">
+            <h2 class="text-2xl font-bold text-center mb-6 text-slate-900" data-translate="bookingHeading">सर्विस बुकिंग फॉर्म</h2>
+            <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" data-translate="labelName">आपका नाम</label>
+                    <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" data-placeholder-key="placeholderName" placeholder="पूरा नाम दर्ज करें">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" data-translate="labelPhone">मोबाइल नंबर</label>
+                    <input type="tel" id="phone" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" data-placeholder-key="placeholderPhone" placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" data-translate="labelService">सर्विस या कैटेगरी चुनें</label>
+                    <select id="serviceType" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="इलेक्ट्रिकल वायरिंग" data-translate="optElec">इलेक्ट्रिकल वायरिंग</option>
+                        <option value="टीवी & ऑडियो रिपेयर" data-translate="optTv">टीवी & ऑडियो रिपेयर</option>
+                        <option value="होम अप्लायंसेज (AC/फ्रिज)" data-translate="optAc">होम अप्लायंसेज (AC/फ्रिज)</option>
+                        <option value="मोबाइल & गैजेट्स रिपेयर" data-translate="optMob">मोबाइल & गैजेट्स रिपेयर</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block text-sm font-medium text-slate-700" data-translate="labelAddress">पता / लोकेशन</label>
+                        <button type="button" onclick="getLocation()" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 font-bold py-1 px-2.5 rounded transition flex items-center">
+                            <i class="fa-solid fa-location-crosshairs mr-1"></i> <span data-translate="btnGetLocation">लाइव लोकेशन भरें</span>
+                        <
