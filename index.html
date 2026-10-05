@@ -228,4 +228,20 @@
                         <label class="block text-sm font-medium text-slate-700" data-translate="labelAddress">पता / लोकेशन</label>
                         <button type="button" onclick="getLocation()" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 font-bold py-1 px-2.5 rounded transition flex items-center">
                             <i class="fa-solid fa-location-crosshairs mr-1"></i> <span data-translate="btnGetLocation">लाइव लोकेशन भरें</span>
-                        <
+                        <<script>
+async function changeLanguage(lang) {
+const elements = document.querySelectorAll("[data-translate]");
+try {
+const response = await fetch(locales/${lang}.json);
+const translations = await response.json();
+elements.forEach(element => {
+const key = element.getAttribute("data-translate");
+if (translations[key]) {
+element.textContent = translations[key];
+}
+});
+} catch (error) {
+console.error("Error loading translation:", error);
+}
+}
+</script>
