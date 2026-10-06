@@ -344,7 +344,7 @@
             }
         };
 
-        function changeLanguage(lang) {
+                function changeLanguage(lang) {
             if (!translations[lang]) return;
             
             document.querySelectorAll('[data-translate]').forEach(el => {
@@ -362,7 +362,20 @@
             });
             
             document.getElementById('htmlRoot').setAttribute('lang', lang);
+
+            // Browser ki memory mein language save karna
+            localStorage.setItem('savedLanguage', lang);
         }
+
+        // Page refresh / load hone par saved language wapas set karna
+        window.onload = function() {
+            let savedLang = localStorage.getItem('savedLanguage');
+            if (savedLang) {
+                document.getElementById('langSelect').value = savedLang;
+                changeLanguage(savedLang);
+            }
+        };
+
     </script>
 </body>
 </html>
