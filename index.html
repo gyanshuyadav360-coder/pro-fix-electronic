@@ -153,12 +153,32 @@
 
     <!-- INLINE TRANSLATION SCRIPT & LOGIC -->
     <script>
-        // Form Submit Function
+                // Form Submit Function (WhatsApp Integration)
         function handleBooking(event) {
             event.preventDefault(); // Prevents page reload
-            alert("✅ बुकिंग सफलतापूर्वक प्राप्त हो गई है! हम जल्द ही आपसे संपर्क करेंगे।\n(Booking Successfully Received!)");
-            document.getElementById('bookingForm').reset(); // Clears form after submit
+
+            // Form se data nikalna
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+            let service = document.getElementById('serviceType').value;
+            let address = document.getElementById('address').value;
+
+            // Yahan apna 10-digit WhatsApp number daalein (country code 91 ke sath)
+            let whatsappNumber = "919576542660"; 
+
+            // WhatsApp par bhejne ke liye message format karna
+            let message = `*New Booking - Pro Fix*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${service}\n*Address/Location:* ${address}`;
+
+            // WhatsApp ka link banana
+            let whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            // WhatsApp open karna
+            window.open(whatsappUrl, '_blank');
+
+            // Form clear karna
+            document.getElementById('bookingForm').reset();
         }
+
 
         // Live Location Fetcher Function
         function getLocation() {
