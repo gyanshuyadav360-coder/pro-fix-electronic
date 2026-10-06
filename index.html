@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">Pro Fix Electronic - हाइपरलोकल सर्विस हब</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Animation Styles -->
     <style>
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
 
-    <!-- Navbar with Custom Graphic Logo -->
+    <!-- Navbar -->
     <nav class="bg-indigo-600 text-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Custom Designed Graphic Logo -->
             <div class="flex items-center space-x-3">
                 <div class="bg-white p-2 rounded-xl shadow-md flex items-center justify-center transform hover:rotate-6 transition duration-300">
                     <svg class="w-7 h-7 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -45,12 +40,20 @@
                     <a href="#specialists" class="hover:text-indigo-200 transition" data-translate="navSpecialists">विशेषज्ञ मिस्त्री</a>
                     <a href="#rates" class="hover:text-indigo-200 transition" data-translate="navRates">रेट कार्ड</a>
                     <a href="#book" class="hover:text-indigo-200 transition" data-translate="navBook">बुक करें</a>
-                    <a href="#join-worker" class="hover:text-indigo-200 transition" data-translate="navWorker">कारीगर बनें</a>
                 </div>
-                <!-- Language Selector Dropdown -->
                 <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-indigo-700 text-white text-sm font-semibold px-2.5 py-1.5 rounded border border-indigo-500 focus:outline-none cursor-pointer max-w-[150px]">
                     <option value="hi" selected>हिंदी (Hindi)</option>
                     <option value="en">English</option>
+                    <option value="bho">भोजपुरी (Bhojpuri)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="ur">اردو (Urdu)</option>
+                    <option value="es">Español (Spanish)</option>
+                    <option value="fr">Français (French)</option>
                 </select>
             </div>
         </div>
@@ -63,11 +66,8 @@
             <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight" data-translate="heroTitle">इलेक्ट्रॉनिक्स और घर की मरम्मत अब एक क्लिक दूर</h1>
             <p class="text-lg md:text-xl text-indigo-200 mb-8 max-w-2xl mx-auto" data-translate="heroSubtitle">टीवी, मोबाइल, फ्रिज, एसी और वायरिंग के लिए अपने इलाके के एक्सपर्ट मिस्त्री बुक करें।</p>
             <div class="space-x-4">
-                <a href="#book" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-full shadow-xl transition transform hover:-translate-y-1 inline-block mb-3">
+                <a href="#book" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-full shadow-xl transition inline-block mb-3">
                     <i class="fa-solid fa-calendar-check mr-2"></i> <span data-translate="btnBookNow">सर्विस बुक करें</span>
-                </a>
-                <a href="#join-worker" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-3.5 px-8 rounded-full shadow-xl transition transform hover:-translate-y-1 inline-block">
-                    <i class="fa-solid fa-user-plus mr-2"></i> <span data-translate="btnJoinWorker">कारीगर के रूप में जुड़ें</span>
                 </a>
             </div>
         </div>
@@ -76,70 +76,36 @@
     <!-- Services Section -->
     <section id="services" class="py-16 max-w-7xl mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-slate-900" data-translate="servicesHeading">हमारी प्रमुख सेवाएं</h2>
-        <p class="text-center text-slate-600 mb-10 max-w-lg mx-auto text-sm" data-translate="servicesSub">प्रशिक्षित तकनीशियनों द्वारा घर बैठे सुरक्षित और किफायती समाधान।</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
                 <div class="h-48 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
-                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge1">₹199 से शुरू</div>
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full" data-translate="badge1">₹199 से शुरू</div>
                 </div>
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service1Title">इलेक्ट्रिकल वायरिंग</h3>
                     <p class="text-slate-600 mb-4 text-sm" data-translate="service1Desc">घरेलू वायरिंग, स्विच बोर्ड रिपेयर, एमसीबी और इन्वर्टर फिटिंग।</p>
-                    <button class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
                 </div>
             </div>
             <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
                 <div class="h-48 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
-                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge2">₹249 से शुरू</div>
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full" data-translate="badge2">₹249 से शुरू</div>
                 </div>
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service2Title">टीवी & ऑडियो रिपेयर</h3>
                     <p class="text-slate-600 mb-4 text-sm" data-translate="service2Desc">LED/LCD टीवी डिस्प्ले समस्या, साउंड सिस्टम और होम थिएटर रिपेयर।</p>
-                    <button class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
                 </div>
             </div>
             <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100">
                 <div class="h-48 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
-                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow" data-translate="badge3">₹499 से शुरू</div>
+                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full" data-translate="badge3">₹499 से शुरू</div>
                 </div>
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-bold mb-2 text-slate-900" data-translate="service3Title">होम अप्लायंसेज (AC/फ्रिज)</h3>
                     <p class="text-slate-600 mb-4 text-sm" data-translate="service3Desc">रेफ्रिजरेटर, एसी सर्विसिंग, वाशिंग मशीन और कूलर रिपेयरिंग।</p>
-                    <button class="w-full bg-indigo-50 hover:bg-indigo-600 hover:text-white text-indigo-700 font-semibold py-2.5 rounded-xl"><span data-translate="selectBtn">यह चुनें</span> &rarr;</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialists Section -->
-    <section id="specialists" class="py-16 bg-indigo-50/60 max-w-7xl mx-auto px-4 rounded-3xl my-6 border border-indigo-100">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-slate-900" data-translate="specHeading">कौन सा मिस्त्री कौन सा काम करता है?</h2>
-        <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto text-sm" data-translate="specSubtext">हमारे पास हर खास काम के लिए ट्रेंड और सर्टिफाइड एक्सपर्ट मिस्त्री उपलब्ध हैं:</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-plug-circle-bolt"></i></div>
-                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat1Title">इलेक्ट्रिकल एक्सपर्ट</h3>
-                <p class="text-sm text-slate-600 mb-3" data-translate="cat1Desc">घर की नई वायरिंग, मीटर बोर्ड, कट-आउट और हेवी लोड फॉल्ट ठीक करना।</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-display"></i></div>
-                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat2Title">टीवी & डिस्प्ले मिस्त्री</h3>
-                <p class="text-sm text-slate-600 mb-3" data-translate="cat2Desc">LED/Smart TV मदरबोर्ड रिपेयर, स्क्रीन लाइन प्रॉब्लम और वॉल माउंटिंग।</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-temperature-low"></i></div>
-                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat3Title">कूलिंग & AC मिस्त्री</h3>
-                <p class="text-sm text-slate-600 mb-3" data-translate="cat3Desc">AC गैस रिफिलिंग, कंप्रेसर रिपेयर, फ्रिज कूलिंग और वाटर प्यूरीफायर (RO) सर्विस।</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <div class="text-indigo-600 text-3xl mb-3"><i class="fa-solid fa-mobile-screen"></i></div>
-                <h3 class="font-bold text-lg mb-1 text-slate-900" data-translate="cat4Title">मोबाइल & गैजेट्स मिस्त्री</h3>
-                <p class="text-sm text-slate-600 mb-3" data-translate="cat4Desc">स्मार्टफोन टच/ग्लास चेंज, चार्जिंग जैक, बैटरी रिप्लेसमेंट और सॉफ्टवेयर समस्या।</p>
             </div>
         </div>
     </section>
@@ -148,7 +114,9 @@
     <section id="book" class="bg-indigo-50 py-16 px-4">
         <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg border border-indigo-100">
             <h2 class="text-2xl font-bold text-center mb-6 text-slate-900" data-translate="bookingHeading">सर्विस बुकिंग फॉर्म</h2>
-            <form id="bookingForm" class="space-y-4">
+            
+            <!-- Added onsubmit attribute to call JS function -->
+            <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-4">
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-1" data-translate="labelName">आपका नाम</label>
                     <input type="text" id="name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg" data-placeholder-key="placeholderName" placeholder="पूरा नाम दर्ज करें">
@@ -162,77 +130,203 @@
                     <select id="serviceType" class="w-full px-4 py-2 border border-slate-300 rounded-lg">
                         <option value="इलेक्ट्रिकल वायरिंग" data-translate="optElec">इलेक्ट्रिकल वायरिंग</option>
                         <option value="टीवी & ऑडियो रिपेयर" data-translate="optTv">टीवी & ऑडियो रिपेयर</option>
-                        <option value="होम अप्लायंसेज (AC/फ्रिज)" data-translate="optAc">होम अप्लायंसेज (AC/फ्रिज)</option>
-                        <option value="मोबाइल & गैजेट्स रिपेयर" data-translate="optMob">मोबाइल & गैजेट्स रिपेयर</option>
+                        <option value="होम अप्लायंसेज" data-translate="optAc">होम अप्लायंसेज (AC/फ्रिज)</option>
                     </select>
                 </div>
                 <div>
                     <div class="flex justify-between items-center mb-1">
                         <label class="block text-sm font-medium text-slate-700" data-translate="labelAddress">पता / लोकेशन</label>
-                        <button type="button" class="text-xs bg-indigo-100 text-indigo-700 font-bold py-1 px-2.5 rounded flex items-center">
+                        <!-- Added getLocation() function call -->
+                        <button type="button" onclick="getLocation()" class="text-xs bg-indigo-100 text-indigo-700 font-bold py-1 px-2.5 rounded flex items-center">
                             <i class="fa-solid fa-location-crosshairs mr-1"></i> <span data-translate="btnGetLocation">लाइव लोकेशन भरें</span>
                         </button>
                     </div>
                     <textarea id="address" required class="w-full px-4 py-2 border border-slate-300 rounded-lg" rows="2"></textarea>
                 </div>
-                <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg mt-4">
+                <!-- Changed type="button" to type="submit" -->
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg mt-4">
                     <span data-translate="btnSubmit">सबमिट करें</span>
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- INLINE TRANSLATION SCRIPT -->
+    <!-- INLINE TRANSLATION SCRIPT & LOGIC -->
     <script>
+        // Form Submit Function
+        function handleBooking(event) {
+            event.preventDefault(); // Prevents page reload
+            alert("✅ बुकिंग सफलतापूर्वक प्राप्त हो गई है! हम जल्द ही आपसे संपर्क करेंगे।\n(Booking Successfully Received!)");
+            document.getElementById('bookingForm').reset(); // Clears form after submit
+        }
+
+        // Live Location Fetcher Function
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        document.getElementById('address').value = "Lat: " + position.coords.latitude.toFixed(4) + ", Lng: " + position.coords.longitude.toFixed(4);
+                        alert("✅ लोकेशन सफलतापूर्वक मिल गई!");
+                    },
+                    function(error) {
+                        alert("⚠️ लोकेशन एक्सेस नहीं मिल पाया। कृपया सेटिंग्स में लोकेशन ऑन करें।");
+                    }
+                );
+            } else {
+                alert("आपका ब्राउज़र लोकेशन सपोर्ट नहीं करता है।");
+            }
+        }
+
         const translations = {
             "hi": {
-                "navServices": "सेवाएं", "navSpecialists": "विशेषज्ञ मिस्त्री", "navRates": "रेट कार्ड", 
-                "navBook": "बुक करें", "navWorker": "कारीगर बनें",
-                "heroTitle": "इलेक्ट्रॉनिक्स और घर की मरम्मत अब एक क्लिक दूर",
-                "heroSubtitle": "टीवी, मोबाइल, फ्रिज, एसी और वायरिंग के लिए अपने इलाके के एक्सपर्ट मिस्त्री बुक करें।",
-                "btnBookNow": "सर्विस बुक करें", "btnJoinWorker": "कारीगर के रूप में जुड़ें",
-                "servicesHeading": "हमारी प्रमुख सेवाएं", "servicesSub": "प्रशिक्षित तकनीशियनों द्वारा घर बैठे सुरक्षित और किफायती समाधान।",
-                "badge1": "₹199 से शुरू", "service1Title": "इलेक्ट्रिकल वायरिंग", "service1Desc": "घरेलू वायरिंग, स्विच बोर्ड रिपेयर, एमसीबी और इन्वर्टर फिटिंग।", "selectBtn": "यह चुनें",
+                "navServices": "सेवाएं", "navSpecialists": "विशेषज्ञ मिस्त्री", "navRates": "रेट कार्ड", "navBook": "बुक करें",
+                "heroTitle": "इलेक्ट्रॉनिक्स और घर की मरम्मत अब एक क्लिक दूर", "heroSubtitle": "टीवी, मोबाइल, फ्रिज, एसी और वायरिंग के लिए अपने इलाके के एक्सपर्ट मिस्त्री बुक करें।",
+                "btnBookNow": "सर्विस बुक करें", "servicesHeading": "हमारी प्रमुख सेवाएं",
+                "badge1": "₹199 से शुरू", "service1Title": "इलेक्ट्रिकल वायरिंग", "service1Desc": "घरेलू वायरिंग, स्विच बोर्ड रिपेयर, एमसीबी और इन्वर्टर फिटिंग।",
                 "badge2": "₹249 से शुरू", "service2Title": "टीवी & ऑडियो रिपेयर", "service2Desc": "LED/LCD टीवी डिस्प्ले समस्या, साउंड सिस्टम और होम थिएटर रिपेयर।",
                 "badge3": "₹499 से शुरू", "service3Title": "होम अप्लायंसेज (AC/फ्रिज)", "service3Desc": "रेफ्रिजरेटर, एसी सर्विसिंग, वाशिंग मशीन और कूलर रिपेयरिंग।",
-                "specHeading": "कौन सा मिस्त्री कौन सा काम करता है?", "specSubtext": "हमारे पास हर खास काम के लिए ट्रेंड और सर्टिफाइड एक्सपर्ट मिस्त्री उपलब्ध हैं:",
-                "cat1Title": "इलेक्ट्रिकल एक्सपर्ट", "cat1Desc": "घर की नई वायरिंग, मीटर बोर्ड, कट-आउट और हेवी लोड फॉल्ट ठीक करना।",
-                "cat2Title": "टीवी & डिस्प्ले मिस्त्री", "cat2Desc": "LED/Smart TV मदरबोर्ड रिपेयर, स्क्रीन लाइन प्रॉब्लम और वॉल माउंटिंग।",
-                "cat3Title": "कूलिंग & AC मिस्त्री", "cat3Desc": "AC गैस रिफिलिंग, कंप्रेसर रिपेयर, फ्रिज कूलिंग और वाटर प्यूरीफायर (RO) सर्विस।",
-                "cat4Title": "मोबाइल & गैजेट्स मिस्त्री", "cat4Desc": "स्मार्टफोन टच/ग्लास चेंज, चार्जिंग जैक, बैटरी रिप्लेसमेंट और सॉफ्टवेयर समस्या।",
                 "bookingHeading": "सर्विस बुकिंग फॉर्म", "labelName": "आपका नाम", "placeholderName": "पूरा नाम दर्ज करें",
-                "labelPhone": "मोबाइल नंबर", "placeholderPhone": "10 अंकों का मोबाइल नंबर",
-                "labelService": "सर्विस या कैटेगरी चुनें", "optElec": "इलेक्ट्रिकल वायरिंग", "optTv": "टीवी & ऑडियो रिपेयर", 
-                "optAc": "होम अप्लायंसेज (AC/फ्रिज)", "optMob": "मोबाइल & गैजेट्स रिपेयर",
-                "labelAddress": "पता / लोकेशन", "btnGetLocation": "लाइव लोकेशन भरें", "btnSubmit": "सबमिट करें"
+                "labelPhone": "मोबाइल नंबर", "placeholderPhone": "10 अंकों का मोबाइल नंबर", "labelService": "सर्विस चुनें", 
+                "optElec": "इलेक्ट्रिकल वायरिंग", "optTv": "टीवी & ऑडियो रिपेयर", "optAc": "होम अप्लायंसेज (AC/फ्रिज)",
+                "labelAddress": "पता / लोकेशन", "btnGetLocation": "लाइव लोकेशन", "btnSubmit": "सबमिट करें"
             },
             "en": {
-                "navServices": "Services", "navSpecialists": "Specialists", "navRates": "Rate Card", 
-                "navBook": "Book Now", "navWorker": "Join as Worker",
-                "heroTitle": "Electronics & Home Repair Just a Click Away",
-                "heroSubtitle": "Book expert mechanics in your area for TV, Mobile, Fridge, AC, and Wiring.",
-                "btnBookNow": "Book Service", "btnJoinWorker": "Join as Worker",
-                "servicesHeading": "Our Main Services", "servicesSub": "Safe and affordable solutions at home by trained technicians.",
-                "badge1": "Starts at ₹199", "service1Title": "Electrical Wiring", "service1Desc": "Home wiring, switch board repair, MCB and inverter fitting.", "selectBtn": "Select This",
+                "navServices": "Services", "navSpecialists": "Specialists", "navRates": "Rate Card", "navBook": "Book Now",
+                "heroTitle": "Electronics & Home Repair Just a Click Away", "heroSubtitle": "Book expert mechanics in your area for TV, Mobile, Fridge, AC, and Wiring.",
+                "btnBookNow": "Book Service", "servicesHeading": "Our Main Services",
+                "badge1": "Starts at ₹199", "service1Title": "Electrical Wiring", "service1Desc": "Home wiring, switch board repair, MCB and inverter fitting.",
                 "badge2": "Starts at ₹249", "service2Title": "TV & Audio Repair", "service2Desc": "LED/LCD TV display issues, sound system and home theater repair.",
                 "badge3": "Starts at ₹499", "service3Title": "Home Appliances (AC/Fridge)", "service3Desc": "Refrigerator, AC servicing, washing machine and cooler repairing.",
-                "specHeading": "Which mechanic does what?", "specSubtext": "We have trained and certified expert mechanics for every specific job:",
-                "cat1Title": "Electrical Expert", "cat1Desc": "New home wiring, meter board, cut-out, and heavy load fault fixing.",
-                "cat2Title": "TV & Display Mechanic", "cat2Desc": "LED/Smart TV motherboard repair, screen line problem, and wall mounting.",
-                "cat3Title": "Cooling & AC Mechanic", "cat3Desc": "AC gas refilling, compressor repair, fridge cooling, and RO service.",
-                "cat4Title": "Mobile & Gadgets Mechanic", "cat4Desc": "Smartphone touch/glass change, charging jack, battery replacement, and software issues.",
                 "bookingHeading": "Service Booking Form", "labelName": "Your Name", "placeholderName": "Enter full name",
-                "labelPhone": "Mobile Number", "placeholderPhone": "10-digit mobile number",
-                "labelService": "Select Service or Category", "optElec": "Electrical Wiring", "optTv": "TV & Audio Repair", 
-                "optAc": "Home Appliances (AC/Fridge)", "optMob": "Mobile & Gadgets Repair",
-                "labelAddress": "Address / Location", "btnGetLocation": "Fill Live Location", "btnSubmit": "Submit"
+                "labelPhone": "Mobile Number", "placeholderPhone": "10-digit mobile number", "labelService": "Select Service", 
+                "optElec": "Electrical Wiring", "optTv": "TV & Audio Repair", "optAc": "Home Appliances (AC/Fridge)",
+                "labelAddress": "Address / Location", "btnGetLocation": "Live Location", "btnSubmit": "Submit"
+            },
+            "bho": {
+                "navServices": "सेवा", "navSpecialists": "बढ़िया मिस्त्री", "navRates": "खर्चा", "navBook": "बुक करीं",
+                "heroTitle": "इलेक्ट्रॉनिक अवुरी घर के मरम्मत अब एक क्लिक प", "heroSubtitle": "टीवी, मोबाइल, फ्रिज, एसी खातिर अपना इलाका के मिस्त्री बुक करीं।",
+                "btnBookNow": "सर्विस बुक करीं", "servicesHeading": "हमार मुख्य सेवा",
+                "badge1": "₹199 से शुरू", "service1Title": "इलेक्ट्रिकल वायरिंग", "service1Desc": "घरेलू वायरिंग, स्विच बोर्ड रिपेयर, एमसीबी फिटिंग।",
+                "badge2": "₹249 से शुरू", "service2Title": "टीवी & ऑडियो रिपेयर", "service2Desc": "LED/LCD टीवी डिस्प्ले, साउंड सिस्टम रिपेयर।",
+                "badge3": "₹499 से शुरू", "service3Title": "होम अप्लायंसेज", "service3Desc": "रेफ्रिजरेटर, एसी सर्विसिंग, वाशिंग मशीन।",
+                "bookingHeading": "सर्विस बुकिंग फॉर्म", "labelName": "रउआ नाम", "placeholderName": "पूरा नाम लिखीं",
+                "labelPhone": "मोबाइल नंबर", "placeholderPhone": "10 अंक के नंबर", "labelService": "सर्विस चुनीं", 
+                "optElec": "इलेक्ट्रिकल वायरिंग", "optTv": "टीवी & ऑडियो", "optAc": "होम अप्लायंसेज",
+                "labelAddress": "पता / लोकेशन", "btnGetLocation": "लाइव लोकेशन", "btnSubmit": "जमा करीं"
+            },
+            "bn": {
+                "navServices": "পরিষেবা", "navSpecialists": "বিশেষজ্ঞ", "navRates": "রেট কার্ড", "navBook": "বুক করুন",
+                "heroTitle": "ইলেকট্রনিক্স এবং বাড়ির মেরামত এখন এক ক্লিকে", "heroSubtitle": "টিভি, মোবাইল, ফ্রিজ এবং এসির জন্য আপনার এলাকার বিশেষজ্ঞ বুক করুন।",
+                "btnBookNow": "সার্ভিস বুক করুন", "servicesHeading": "আমাদের প্রধান পরিষেবা",
+                "badge1": "₹199 থেকে শুরু", "service1Title": "ইলেকট্রিক্যাল ওয়্যারিং", "service1Desc": "বাড়ির ওয়্যারিং, সুইচ বোর্ড মেরামত।",
+                "badge2": "₹249 থেকে শুরু", "service2Title": "টিভি ও অডিও মেরামত", "service2Desc": "এলইডি টিভি ও সাউন্ড সিস্টেম মেরামত।",
+                "badge3": "₹499 থেকে শুরু", "service3Title": "হোম অ্যাপ্লায়েন্স (এসি/ফ্রিজ)", "service3Desc": "ফ্রিজ, এসি এবং ওয়াশিং মেশিন মেরামত।",
+                "bookingHeading": "বুকিং ফর্ম", "labelName": "আপনার নাম", "placeholderName": "পুরো নাম লিখুন",
+                "labelPhone": "মোবাইল নম্বর", "placeholderPhone": "১০ অঙ্কের নম্বর", "labelService": "পরিষেবা নির্বাচন করুন", 
+                "optElec": "ইলেকট্রিক্যাল ওয়্যারিং", "optTv": "টিভি ও অডিও মেরামত", "optAc": "হোম অ্যাপ্লায়েন্স",
+                "labelAddress": "ঠিকানা / অবস্থান", "btnGetLocation": "লাইভ লোকেশন", "btnSubmit": "জমা দিন"
+            },
+            "mr": {
+                "navServices": "सेवा", "navSpecialists": "तज्ञ", "navRates": "दरपत्रक", "navBook": "बुक करा",
+                "heroTitle": "इलेक्ट्रॉनिक्स आणि घराची दुरुस्ती आता एका क्लिकवर", "heroSubtitle": "टीव्ही, मोबाईल, फ्रिज आणि एसीसाठी तुमच्या भागातील तज्ञ बुक करा.",
+                "btnBookNow": "सर्व्हिस बुक करा", "servicesHeading": "आमच्या प्रमुख सेवा",
+                "badge1": "₹199 पासून सुरु", "service1Title": "इलेक्ट्रिकल वायरिंग", "service1Desc": "घरातील वायरिंग आणि स्विच बोर्ड दुरुस्ती.",
+                "badge2": "₹249 पासून सुरु", "service2Title": "टीव्ही आणि ऑडिओ दुरुस्ती", "service2Desc": "एलईडी टीव्ही आणि साउंड सिस्टीम दुरुस्ती.",
+                "badge3": "₹499 पासून सुरु", "service3Title": "होम अप्लायन्सेस (एसी/फ्रिज)", "service3Desc": "फ्रिज, एसी आणि वॉशिंग मशीन दुरुस्ती.",
+                "bookingHeading": "बुकिंग फॉर्म", "labelName": "तुमचे नाव", "placeholderName": "पूर्ण नाव प्रविष्ट करा",
+                "labelPhone": "मोबाईल नंबर", "placeholderPhone": "१० अंकी नंबर", "labelService": "सेवा निवडा", 
+                "optElec": "इलेक्ट्रिकल वायरिंग", "optTv": "टीव्ही आणि ऑडिओ", "optAc": "होम अप्लायन्सेस",
+                "labelAddress": "पत्ता / लोकेशन", "btnGetLocation": "लाईव्ह लोकेशन", "btnSubmit": "सबमिट करा"
+            },
+            "gu": {
+                "navServices": "સેવાઓ", "navSpecialists": "નિષ્ણાત", "navRates": "રેટ કાર્ડ", "navBook": "બુક કરો",
+                "heroTitle": "ઇલેક્ટ્રોનિક્સ અને ઘરની મરામત હવે એક ક્લિક પર", "heroSubtitle": "ટીવી, મોબાઈલ, ફ્રિજ અને એસી માટે તમારા વિસ્તારના નિષ્ણાતો બુક કરો.",
+                "btnBookNow": "સર્વિસ બુક કરો", "servicesHeading": "અમારી મુખ્ય સેવાઓ",
+                "badge1": "₹199 થી શરૂ", "service1Title": "ઇલેક્ટ્રિકલ વાયરિંગ", "service1Desc": "ઘરનું વાયરિંગ અને સ્વીચ બોર્ડ રિપેર.",
+                "badge2": "₹249 થી શરૂ", "service2Title": "ટીવી અને ઓડિયો રિપેર", "service2Desc": "એલઇડી ટીવી અને સાઉન્ડ સિસ્ટમ રિપેર.",
+                "badge3": "₹499 થી શરૂ", "service3Title": "હોમ એપ્લાયન્સીસ (AC/ફ્રિજ)", "service3Desc": "ફ્રિજ, એસી અને વોશિંગ મશીન રિપેર.",
+                "bookingHeading": "બુકિંગ ફોર્મ", "labelName": "તમારું નામ", "placeholderName": "પૂરું નામ દાખલ કરો",
+                "labelPhone": "મોબાઇલ નંબર", "placeholderPhone": "10 અંકનો નંબર", "labelService": "સેવા પસંદ કરો", 
+                "optElec": "ઇલેક્ટ્રિકલ વાયરિંગ", "optTv": "ટીવી અને ઓડિયો", "optAc": "હોમ એપ્લાયન્સીસ",
+                "labelAddress": "સરનામું / લોકેશન", "btnGetLocation": "લાઇવ લોકેશન", "btnSubmit": "સબમિટ કરો"
+            },
+            "pa": {
+                "navServices": "ਸੇਵਾਵਾਂ", "navSpecialists": "ਮਾਹਰ", "navRates": "ਰੇਟ ਕਾਰਡ", "navBook": "ਬੁੱਕ ਕਰੋ",
+                "heroTitle": "ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਘਰ ਦੀ ਮੁਰੰਮਤ ਹੁਣ ਇੱਕ ਕਲਿੱਕ ਤੇ", "heroSubtitle": "ਟੀਵੀ, ਮੋਬਾਈਲ, ਫਰਿੱਜ ਅਤੇ ਏਸੀ ਲਈ ਮਾਹਰ ਬੁੱਕ ਕਰੋ।",
+                "btnBookNow": "ਸਰਵਿਸ ਬੁੱਕ ਕਰੋ", "servicesHeading": "ਸਾਡੀਆਂ ਮੁੱਖ ਸੇਵਾਵਾਂ",
+                "badge1": "₹199 ਤੋਂ ਸ਼ੁਰੂ", "service1Title": "ਇਲੈਕਟ੍ਰੀਕਲ ਵਾਇਰਿੰਗ", "service1Desc": "ਘਰੇਲੂ ਵਾਇਰਿੰਗ ਅਤੇ ਸਵਿੱਚ ਬੋਰਡ ਮੁਰੰਮਤ।",
+                "badge2": "₹249 ਤੋਂ ਸ਼ੁਰੂ", "service2Title": "ਟੀਵੀ ਅਤੇ ਆਡੀਓ", "service2Desc": "LED ਟੀਵੀ ਅਤੇ ਸਾਊਂਡ ਸਿਸਟਮ ਮੁਰੰਮਤ।",
+                "badge3": "₹499 ਤੋਂ ਸ਼ੁਰੂ", "service3Title": "ਹੋਮ ਅਪਲਾਇੰਸਿਜ਼", "service3Desc": "ਫਰਿੱਜ, AC ਅਤੇ ਵਾਸ਼ਿੰਗ ਮਸ਼ੀਨ ਮੁਰੰਮਤ।",
+                "bookingHeading": "ਬੁਕਿੰਗ ਫਾਰਮ", "labelName": "ਤੁਹਾਡਾ ਨਾਮ", "placeholderName": "ਪੂਰਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+                "labelPhone": "ਮੋਬਾਈਲ ਨੰਬਰ", "placeholderPhone": "10 ਅੰਕਾਂ ਦਾ ਨੰਬਰ", "labelService": "ਸੇਵਾ ਚੁਣੋ", 
+                "optElec": "ਇਲੈਕਟ੍ਰੀਕਲ ਵਾਇਰਿੰਗ", "optTv": "ਟੀਵੀ ਅਤੇ ਆਡੀਓ", "optAc": "ਹੋਮ ਅਪਲਾਇੰਸਿਜ਼",
+                "labelAddress": "ਪਤਾ / ਲੋਕੇਸ਼ਨ", "btnGetLocation": "ਲਾਈਵ ਲੋਕੇਸ਼ਨ", "btnSubmit": "ਜਮ੍ਹਾਂ ਕਰੋ"
+            },
+            "ta": {
+                "navServices": "சேவைகள்", "navSpecialists": "நிபுணர்கள்", "navRates": "கட்டணம்", "navBook": "முன்பதிவு",
+                "heroTitle": "எலக்ட்ரானிக்ஸ் மற்றும் வீட்டு பழுதுபார்ப்பு ஒரு கிளிக்கில்", "heroSubtitle": "டிவி, மொபைல், ஏசி மற்றும் பிரிட்ஜ் பழுதுபார்க்க முன்பதிவு செய்யுங்கள்.",
+                "btnBookNow": "சேவையை முன்பதிவு செய்", "servicesHeading": "முக்கிய சேவைகள்",
+                "badge1": "₹199 முதல்", "service1Title": "வயரிங்", "service1Desc": "வீட்டு வயரிங், சுவிட்ச் போர்டு பழுதுபார்ப்பு.",
+                "badge2": "₹249 முதல்", "service2Title": "டிவி & ஆடியோ", "service2Desc": "LED டிவி மற்றும் ஆடியோ பழுதுபார்ப்பு.",
+                "badge3": "₹499 முதல்", "service3Title": "வீட்டு உபயோகப் பொருட்கள்", "service3Desc": "பிரிட்ஜ், ஏசி மற்றும் வாஷிங் மெஷின்.",
+                "bookingHeading": "முன்பதிவு படிவம்", "labelName": "உங்கள் பெயர்", "placeholderName": "முழு பெயர்",
+                "labelPhone": "மொபைல் எண்", "placeholderPhone": "10 இலக்க எண்", "labelService": "சேவையைத் தேர்வுசெய்க", 
+                "optElec": "வயரிங்", "optTv": "டிவி & ஆடியோ", "optAc": "வீட்டு உபயோகப் பொருட்கள்",
+                "labelAddress": "முகவரி", "btnGetLocation": "நேரடி இடம்", "btnSubmit": "சமர்ப்பிக்கவும்"
+            },
+            "te": {
+                "navServices": "సేవలు", "navSpecialists": "నిపుణులు", "navRates": "రేట్లు", "navBook": "బుక్ చేయండి",
+                "heroTitle": "ఎలక్ట్రానిక్స్ మరియు ఇంటి మరమ్మతులు ఒక క్లిక్‌లో", "heroSubtitle": "టీవీ, మొబైల్, ఏసీ మరియు ఫ్రిజ్ కోసం నిపుణులను బుక్ చేయండి.",
+                "btnBookNow": "సర్వీస్ బుక్ చేయండి", "servicesHeading": "మా ప్రధాన సేవలు",
+                "badge1": "₹199 నుండి", "service1Title": "ఎలక్ట్రికల్ వైరింగ్", "service1Desc": "ఇంటి వైరింగ్ మరియు స్విచ్ బోర్డ్ రిపేర్.",
+                "badge2": "₹249 నుండి", "service2Title": "టీవీ & ఆడియో", "service2Desc": "LED టీవీ మరియు ఆడియో రిపేర్.",
+                "badge3": "₹499 నుండి", "service3Title": "గృహోపకరణాలు", "service3Desc": "ఫ్రిజ్, ఏసీ మరియు వాషింగ్ మెషీన్.",
+                "bookingHeading": "బుకింగ్ ఫారం", "labelName": "మీ పేరు", "placeholderName": "పూర్తి పేరు",
+                "labelPhone": "మొబైల్ నంబర్", "placeholderPhone": "10 అంకెల నంబర్", "labelService": "సేవను ఎంచుకోండి", 
+                "optElec": "ఎలక్ట్రికల్ వైరింగ్", "optTv": "టీవీ & ఆడియో", "optAc": "గృహోపకరణాలు",
+                "labelAddress": "చిరునామా", "btnGetLocation": "లైవ్ లొకేషన్", "btnSubmit": "సమర్పించండి"
+            },
+            "ur": {
+                "navServices": "خدمات", "navSpecialists": "ماہرین", "navRates": "قیمتیں", "navBook": "بک کریں",
+                "heroTitle": "الیکٹرانکس اور گھر کی مرمت اب ایک کلک پر", "heroSubtitle": "ٹی وی، موبائل، فریج اور اے سی کے لیے ماہرین بک کریں۔",
+                "btnBookNow": "سروس بک کریں", "servicesHeading": "ہماری اہم خدمات",
+                "badge1": "₹199 سے شروع", "service1Title": "الیکٹریکل وائرنگ", "service1Desc": "گھریلو وائرنگ اور سوئچ بورڈ کی مرمت۔",
+                "badge2": "₹249 سے شروع", "service2Title": "ٹی وی اور آڈیو مرمت", "service2Desc": "ایل ای ڈی ٹی وی اور ساؤنڈ سسٹم کی مرمت۔",
+                "badge3": "₹499 سے شروع", "service3Title": "گھریلو آلات", "service3Desc": "فریج، اے سی اور واشنگ مشین کی مرمت۔",
+                "bookingHeading": "بکنگ فارم", "labelName": "آپ کا نام", "placeholderName": "پورا نام درج کریں",
+                "labelPhone": "موبائل نمبر", "placeholderPhone": "10 ہندسوں کا نمبر", "labelService": "سروس منتخب کریں", 
+                "optElec": "الیکٹریکل وائرنگ", "optTv": "ٹی وی اور آڈیو", "optAc": "گھریلو آلات",
+                "labelAddress": "پتہ / مقام", "btnGetLocation": "لائیو لوکیشن", "btnSubmit": "جمع کریں"
+            },
+            "es": {
+                "navServices": "Servicios", "navSpecialists": "Especialistas", "navRates": "Tarifas", "navBook": "Reservar",
+                "heroTitle": "Electrónica y Reparación del Hogar a un Clic", "heroSubtitle": "Reserva expertos para TV, Móvil, Nevera y AC.",
+                "btnBookNow": "Reservar Servicio", "servicesHeading": "Servicios Principales",
+                "badge1": "Desde ₹199", "service1Title": "Cableado Eléctrico", "service1Desc": "Cableado del hogar y reparación de interruptores.",
+                "badge2": "Desde ₹249", "service2Title": "Reparación de TV y Audio", "service2Desc": "Reparación de TV LED y sistemas de sonido.",
+                "badge3": "Desde ₹499", "service3Title": "Electrodomésticos", "service3Desc": "Servicio de AC, nevera y lavadora.",
+                "bookingHeading": "Formulario de Reserva", "labelName": "Tu Nombre", "placeholderName": "Nombre completo",
+                "labelPhone": "Número Móvil", "placeholderPhone": "Número de 10 dígitos", "labelService": "Seleccionar Servicio", 
+                "optElec": "Cableado Eléctrico", "optTv": "TV y Audio", "optAc": "Electrodomésticos",
+                "labelAddress": "Dirección", "btnGetLocation": "Ubicación en vivo", "btnSubmit": "Enviar"
+            },
+            "fr": {
+                "navServices": "Services", "navSpecialists": "Spécialistes", "navRates": "Tarifs", "navBook": "Réserver",
+                "heroTitle": "Électronique et Réparation à Domicile", "heroSubtitle": "Réservez des experts pour TV, Mobile, Réfrigérateur et AC.",
+                "btnBookNow": "Réserver le service", "servicesHeading": "Nos Principaux Services",
+                "badge1": "À partir de ₹199", "service1Title": "Câblage Électrique", "service1Desc": "Câblage domestique et réparation de tableaux.",
+                "badge2": "À partir de ₹249", "service2Title": "Réparation TV et Audio", "service2Desc": "Réparation de TV LED et systèmes audio.",
+                "badge3": "À partir de ₹499", "service3Title": "Appareils Électroménagers", "service3Desc": "Entretien de réfrigérateurs et climatiseurs.",
+                "bookingHeading": "Formulaire de Réservation", "labelName": "Votre Nom", "placeholderName": "Nom complet",
+                "labelPhone": "Numéro de Mobile", "placeholderPhone": "Numéro à 10 chiffres", "labelService": "Sélectionner un service", 
+                "optElec": "Câblage Électrique", "optTv": "TV et Audio", "optAc": "Électroménager",
+                "labelAddress": "Adresse", "btnGetLocation": "Position en direct", "btnSubmit": "Soumettre"
             }
         };
 
         function changeLanguage(lang) {
             if (!translations[lang]) return;
             
-            // Text change logic
             document.querySelectorAll('[data-translate]').forEach(el => {
                 const key = el.getAttribute('data-translate');
                 if (translations[lang][key]) {
@@ -240,7 +334,6 @@
                 }
             });
 
-            // Placeholder change logic
             document.querySelectorAll('[data-placeholder-key]').forEach(el => {
                 const key = el.getAttribute('data-placeholder-key');
                 if (translations[lang][key]) {
@@ -248,4 +341,8 @@
                 }
             });
             
-            document.getElementById('htmlRoot').setAttribute('lang
+            document.getElementById('htmlRoot').setAttribute('lang', lang);
+        }
+    </script>
+</body>
+</html>
