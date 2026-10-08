@@ -188,7 +188,26 @@
             document.getElementById('bookingForm').reset();
         }
 
+        // Worker Join Function 
+        function handleWorkerJoin(event) {
+            event.preventDefault(); 
 
+            let wName = document.getElementById('workerName').value;
+            let wPhone = document.getElementById('workerPhone').value;
+            let wSkill = document.getElementById('workerSkill').value;
+            let wExp = document.getElementById('workerExp').value;
+
+            // यहाँ अपना असली WhatsApp नंबर डालें (91 के साथ)
+            let adminNumber = "919576542660"; 
+
+            let workerMessage = `*नया मिस्त्री जुड़ना चाहता है!*\n\n*नाम:* ${wName}\n*नंबर:* ${wPhone}\n*काम:* ${wSkill}\n*अनुभव:* ${wExp}`;
+
+            let wpUrl = `https://wa.me/${adminNumber}?text=${encodeURIComponent(workerMessage)}`;
+            window.open(wpUrl, '_blank');
+
+            document.getElementById('workerForm').reset();
+                }
+                
         // Live Location Fetcher Function
         function getLocation() {
             if (navigator.geolocation) {
