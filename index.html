@@ -159,7 +159,37 @@
             </form>
         </div>
     </section>
-
+    <!-- Mistri Join Form Section -->
+    <section id="join-worker" class="py-12 px-4 max-w-xl mx-auto mt-8 animate-slide-up">
+        <div class="bg-indigo-600 p-8 rounded-2xl shadow-xl text-white transform hover:scale-[1.02] transition duration-300">
+            <h2 class="text-2xl font-bold text-center mb-2">Pro Fix के कारीगर बनें</h2>
+            <p class="text-center text-indigo-200 mb-6 text-sm">हमारे नेटवर्क से जुड़ें और अपनी कमाई बढ़ाएं।</p>
+            
+            <form id="workerForm" onsubmit="handleWorkerJoin(event)" class="space-y-4 text-slate-800">
+                <div>
+                    <input type="text" id="workerName" required class="w-full px-4 py-2 border-0 rounded-lg" placeholder="आपका पूरा नाम">
+                </div>
+                <div>
+                    <input type="tel" id="workerPhone" required class="w-full px-4 py-2 border-0 rounded-lg" placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+                <div>
+                    <select id="workerSkill" class="w-full px-4 py-2 border-0 rounded-lg">
+                        <option value="इलेक्ट्रिशियन (बिजली मिस्त्री)">इलेक्ट्रिशियन (बिजली मिस्त्री)</option>
+                        <option value="एसी / फ्रिज मैकेनिक">एसी / फ्रिज मैकेनिक</option>
+                        <option value="टीवी मैकेनिक">टीवी मैकेनिक</option>
+                        <option value="मोबाइल मैकेनिक">मोबाइल मैकेनिक</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" id="workerExp" required class="w-full px-4 py-2 border-0 rounded-lg" placeholder="कितने साल का अनुभव है?">
+                </div>
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-3 rounded-xl shadow-lg mt-4 transform hover:-translate-y-1 transition duration-300">
+                    अप्लाई करें
+                </button>
+            </form>
+        </div>
+    </section>
+    
     <!-- INLINE TRANSLATION SCRIPT & LOGIC -->
     <script>
                 // Form Submit Function (WhatsApp Integration)
